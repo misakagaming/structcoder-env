@@ -1,0 +1,8 @@
+torch
+torchvision
+transformers
+tree_sitter
+numpy
+pandas
+scipy>=0.15.1
+scikit-learn>=0.18
