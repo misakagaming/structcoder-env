@@ -12,6 +12,7 @@ env:
   VERSION: latest
 
 jobs:
+
   build-and-push-image:
     runs-on: ubuntu-latest
     permissions:
@@ -19,6 +20,8 @@ jobs:
       packages: write
 
     steps:
+      - name: Delete huge unnecessary tools folder
+        run: rm -rf /opt/hostedtoolcache
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Set up Docker Buildx
