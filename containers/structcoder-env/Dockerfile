@@ -35,9 +35,9 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 # Put conda in path so we can use conda activate
 ENV PATH=$CONDA_DIR/bin:$PATH
 
-COPY environment-complex.yml .
-RUN conda env update -f environment-complex.yml &&\
-    conda clean -tipy
+#COPY environment-complex.yml .
+#RUN conda env update -f environment-complex.yml &&\
+#    conda clean -tipy
 
 COPY translation .
 
